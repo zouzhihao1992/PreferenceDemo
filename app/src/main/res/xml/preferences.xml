@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="checkboxPreference"
+        android:title="checkBoxPreferenceTitle"
+        android:summary="summary1"
+        android:defaultValue="true" />
+    <ListPreference
+        android:dependency="checkboxPreference"
+        android:key="listPreference"
+        android:title="listPreferenceTitle"
+        android:dialogTitle="dialogTitle"
+        android:entries="@array/city"
+        android:entryValues="@array/result"
+        android:defaultValue="hehe" />
+
+    <Preference android:title="intent" >
+        <intent android:action="android.intent.action.VIEW"
+            android:data="http://www.baidu.com" />
+    </Preference>
+</PreferenceScreen>
